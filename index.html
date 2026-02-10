@@ -1,27 +1,308 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Daily Achievements</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cloud Certifications & Learning Journey</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .profile-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .profile-photo {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 4rem;
+      font-weight: bold;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .profile-info {
+      flex: 1;
+      min-width: 300px;
+      max-width: 600px;
+    }
+
+    h1 {
+      color: #667eea;
+      margin-bottom: 1rem;
+      font-size: 2.5rem;
+    }
+
+    h2 {
+      color: #667eea;
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+    }
+
+    .intro {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      line-height: 1.8;
+    }
+
+    .section {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2rem;
+    }
+
+    .achievements-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .achievement-card {
+      background: #f8f9fa;
+      padding: 1.5rem;
+      border-radius: 8px;
+      border-left: 4px solid #667eea;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .achievement-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .achievement-card h3 {
+      color: #667eea;
+      margin-bottom: 0.5rem;
+    }
+
+    .achievement-card p {
+      color: #666;
+      margin-bottom: 1rem;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #667eea;
+      color: white;
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .courses-section {
+      margin-top: 1.5rem;
+    }
+
+    .course-link {
+      display: block;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      margin-bottom: 1rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      font-weight: 500;
+    }
+
+    .course-link:hover {
+      transform: translateX(10px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .course-link.coming-soon {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+
+    .social-link {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background: #667eea;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+
+    .social-link:hover {
+      background: #764ba2;
+    }
+
+    footer {
+      text-align: center;
+      color: white;
+      padding: 2rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .profile-section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      .achievements-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>My Daily Achievements</h1>
-  <p>This blog documents everything I learned day to day and everything relates to my job hunting in the age of AI. </p>
-  <section>
-  <h2> Day1 : 27/Jan/2026</h2>
-  <p>so for now what I did for now: 
-  
-    <ul>
-      <li>
-        I started with creating a static webite using the support of chatgpt ( for the instructions), and github for the platform
-      </li>
-      <li>
-        I decided to send some applications for job hunting, for example writing email for optimum partners and adding the CV, I also applied for internships here and there
-      </li>
-      <li> </li>
-    </ul>
+  <div class="container">
+    <header>
+      <div class="profile-section">
+        <div class="profile-photo">
+          <!-- TO ADD YOUR PHOTO: 
+               1. Upload your photo to assets/images/ folder (e.g., profile.jpg)
+               2. Uncomment the line below and remove the "E" letter
+               3. Update the src path to match your filename
+          <img src="assets/images/profile.jpg" alt="Profile Photo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+          -->
+          E
+        </div>
+        <div class="profile-info">
+          <h1>Welcome to My Learning Journey</h1>
+          <p class="intro">
+            Hi! I'm on a mission to master cloud technologies and earn industry-recognized certifications. 
+            This website documents my learning journey through Azure, AWS, and other cloud platforms, 
+            providing comprehensive summaries, resources, and insights to help both myself and others 
+            preparing for certification exams.
+          </p>
+          <div class="social-links">
+            <!-- UPDATE THESE LINKS WITH YOUR ACTUAL INFORMATION -->
+            <a href="https://github.com/Echo-83" class="social-link" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/your-profile" class="social-link" target="_blank">LinkedIn</a> <!-- UPDATE: Replace 'your-profile' with your LinkedIn username -->
+            <a href="mailto:your.email@example.com" class="social-link">Contact Me</a> <!-- UPDATE: Replace with your actual email -->
+          </div>
+        </div>
+      </div>
+    </header>
 
-    </p>
-  </section>
+    <div class="section">
+      <h2>🏆 Achievements & Certifications</h2>
+      <div class="achievements-grid">
+        <div class="achievement-card">
+          <h3>Cloud Certification Journey</h3>
+          <p>Currently pursuing multiple cloud certifications to enhance my expertise in modern cloud infrastructure and services.</p>
+          <span class="badge">Azure</span>
+          <span class="badge">AWS</span>
+          <span class="badge">In Progress</span>
+        </div>
+        
+        <div class="achievement-card">
+          <h3>Documentation & Resources</h3>
+          <p>Creating comprehensive documentation and study resources for cloud certification preparation, addressing gaps in existing materials.</p>
+          <span class="badge">Study Guides</span>
+          <span class="badge">Practice Questions</span>
+        </div>
+        
+        <div class="achievement-card">
+          <h3>Continuous Learning</h3>
+          <p>Daily commitment to learning new technologies and documenting the journey to help others in their certification path.</p>
+          <span class="badge">Daily Practice</span>
+          <span class="badge">Knowledge Sharing</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>📚 Course Summaries & Resources</h2>
+      <p>Explore detailed course summaries, study guides, and resources for various cloud certifications:</p>
+      <div class="courses-section">
+        <a href="azure.html" class="course-link coming-soon">
+          ☁️ Microsoft Azure Certification Guide (Coming Soon)
+        </a>
+        <a href="aws.html" class="course-link coming-soon">
+          ☁️ AWS Certification Guide (Coming Soon)
+        </a>
+        <a href="resources.html" class="course-link coming-soon">
+          📖 Additional Resources & Study Materials (Coming Soon)
+        </a>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>💡 About This Project</h2>
+      <p class="intro">
+        This website serves as both a personal learning log and a resource hub for cloud certification preparation. 
+        I noticed a lack of comprehensive, well-organized documentation and practice materials for cloud certifications, 
+        and I'm building this platform to address that gap. Each course page will contain detailed topic summaries, 
+        key concepts, practice questions, and links to valuable resources.
+      </p>
+      <p class="intro">
+        As I progress through my certification journey, I'll be adding more content, including:
+      </p>
+      <ul style="margin-left: 2rem; margin-top: 1rem;">
+        <li>Topic-by-topic breakdowns for each certification</li>
+        <li>Practice questions and explanations</li>
+        <li>Helpful tips and exam strategies</li>
+        <li>Links to official documentation and additional resources</li>
+        <li>Personal insights and lessons learned</li>
+      </ul>
+    </div>
+
+    <footer>
+      <p>&copy; 2026 Cloud Certifications Journey. All rights reserved.</p>
+      <p>Building knowledge, one topic at a time.</p>
+    </footer>
+  </div>
 </body>
-  
 </html>
