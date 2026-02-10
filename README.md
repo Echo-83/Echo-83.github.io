@@ -71,6 +71,14 @@ python3 -m http.server 8080
 3. Commit and push to GitHub
 4. Changes will appear on your GitHub Pages site automatically
 
+## 🔧 Troubleshooting
+
+If your changes aren't showing on the live website:
+- See [DEPLOYMENT_TROUBLESHOOTING.md](DEPLOYMENT_TROUBLESHOOTING.md) for a complete guide
+- Most common cause: **browser cache** - try a hard refresh (`Ctrl+F5` or `Cmd+Shift+R`)
+- Ensure changes are on the `main` branch
+- Check the Actions tab for deployment status
+
 ---
 
 **Building knowledge, one topic at a time.** 💡
